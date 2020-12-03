@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Oshzp17KkbGZ/kIlwi4hyj4qoAgiOuI5OXB5Ilw+U0sk6GE40etSfpwA1dJesKs9kqU3Rj0NflOYel54UQxTyw==",
+  "success": true,
+  "projectFilePath": "/home/mwalk/source/AdventOfCode/AdventOfCode.csproj",
+  "expectedPackageFiles": [
+    "/home/mwalk/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.8/microsoft.aspnetcore.app.ref.3.1.8.nupkg.sha512"
+  ],
+  "logs": []
+}
