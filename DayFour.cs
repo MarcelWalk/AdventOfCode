@@ -85,7 +85,7 @@ return validationResults.Where(x=>x).Count();
                                     throw new Exception("HGT CM Invalid");
                                 break;
                             case "hcl": //a # followed by exactly six characters 0-9 or a-f
-                                if(!Regex.IsMatch(fieldSplit[1],"#[0-9a-f]{6}"))
+                                if(!Regex.IsMatch(fieldSplit[1],"^#[0-9a-f]{6}$"))
                                     throw new Exception("HCL Invalid");
                                 break;
                             case "ecl": //exactly one of: amb blu brn gry grn hzl oth
