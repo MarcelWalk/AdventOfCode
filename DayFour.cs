@@ -76,13 +76,23 @@ return validationResults.Where(x=>x).Count();
                             case "hgt": //If cm, the number must be at least 150 and at most 193.
                                         //If in, the number must be at least 59 and at most 76.
                                 var hgt = int.Parse(fieldSplit[1].Replace("in","").Replace("cm",""));
-                                if(fieldSplit[1].EndsWith("in"))
-                                    if(hgt < 59 || hgt > 76)
-                                    throw new Exception("HGT Inch Invalid");
-
-                                    if(fieldSplit[1].EndsWith("cm"))
-                                    if(hgt < 150 || hgt > 193)
-                                    throw new Exception("HGT CM Invalid");
+                                if (fieldSplit[1].EndsWith("in"))
+                                {
+                                    if (hgt < 59 || hgt > 76)
+                                    {
+                                        throw new Exception("HGT Inch Invalid");
+                                    }
+                                }
+                                else if (fieldSplit[1].EndsWith("cm"))
+                                {
+                                    if (hgt < 150 || hgt > 193)
+                                    {
+                                        throw new Exception("HGT CM Invalid");
+                                    }
+                                        
+                                }
+                                else
+                                    throw new Exception("HGT Invalid");
                                 break;
                             case "hcl": //a # followed by exactly six characters 0-9 or a-f
                                 if(!Regex.IsMatch(fieldSplit[1],"^#[0-9a-f]{6}$"))
@@ -103,14 +113,26 @@ return validationResults.Where(x=>x).Count();
                                 break;
                         }
                     }
+                        if(
+                    p.Contains("byr") &&
+                    p.Contains("iyr") &&
+                    p.Contains("eyr") &&
+                    p.Contains("hgt") &&
+                    p.Contains("hcl") &&
+                    p.Contains("ecl") &&
+                    p.Contains("pid")
+                    ){
                         validationResults.Add(true);
+                    } else{
+                        throw new Exception("Field/s Missing");
+                    }
                     } catch(Exception e){
                         System.Console.WriteLine(e.Message);
                         validationResults.Add(false);
                     }
                 }
 
-return validationResults.Where(x=>x).Count();
+            return validationResults.Where(x=>x).Count();
         }
     }
 }
