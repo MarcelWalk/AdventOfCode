@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Files\Day6_Test.in" />
+    <None Remove="Files\Day_1\Day1_Test.input" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Files\Day6_Test.in">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="Files\Day_1\Day1_Test.input">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
