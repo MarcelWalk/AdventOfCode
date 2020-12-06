@@ -133,3 +133,5 @@ $RECYCLE.BIN/
 _NCrunch*
 
 bin/Debug/netcoreapp3.1/*
+*.manifest
+*.testlog

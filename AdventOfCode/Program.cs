@@ -8,9 +8,9 @@ namespace AdventOfCode
     {
         private static void Main(string[] args)
         {
-            var input = File.ReadAllText("./files/Day5.input").Split("\n");
+            var input = File.ReadAllText("./Files/Day6.input").Split("\r\n\r\n");
 
-            Console.WriteLine(DayFive.Day5_P2(input));
+            Console.WriteLine(DaySix.Day6_P2(input));
 
             Console.ReadLine();
         }

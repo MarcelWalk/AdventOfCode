@@ -5,4 +5,30 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Files\Day2.input" />
+    <None Remove="Files\Day3.input" />
+    <None Remove="Files\Day4.input" />
+    <None Remove="Files\Day5.input" />
+    <None Remove="Files\Day6.input" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Files\Day2.input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day3.input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day4.input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day5.input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day6.input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
