@@ -19,6 +19,7 @@ namespace AdventOfCode
             }
             return takenSeats.OrderBy(x=>x).Last();
         }
+
         public static int Day5_P2(string[] inp)
         {
             var takenSeats = new List<int>();

@@ -8,10 +8,38 @@
 
   <ItemGroup>
     <None Remove="Files\Day_1\Day1_Test.input" />
+    <None Remove="Files\Day_2\Day2_Test.input" />
+    <None Remove="Files\Day_3\Day3_Test.input" />
+    <None Remove="Files\Day_4\Day4_Test.input" />
+    <None Remove="Files\Day_4\Day4_Test_Invalid.input" />
+    <None Remove="Files\Day_4\Day4_Test_Valid.input" />
+    <None Remove="Files\Day_5\Day5_Test.input" />
+    <None Remove="Files\Day_6\Day6_Test.input" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Files\Day_1\Day1_Test.input">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day_2\Day2_Test.input">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day_3\Day3_Test.input">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day_6\Day6_Test.input">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day_5\Day5_Test.input">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day_4\Day4_Test_Invalid.input">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day_4\Day4_Test_Valid.input">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Day_4\Day4_Test.input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
