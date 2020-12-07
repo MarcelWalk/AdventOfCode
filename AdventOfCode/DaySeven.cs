@@ -1,19 +1,21 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace AdventOfCode
 {
     public class DaySeven
     {
+        static Dictionary<string, List<string>> types;
+        static HashSet<string> set = new HashSet<string>();
+
         public static int Day7_P1(string[] input)
         {
-            var types = GetBagTypes(input);
+            types = GetBagTypes(input);
 
-            var containsDirectly = types.Where(x => x.Value.Contains("shiny gold")).Select(x => x.Key);
-
-            var res = GetPossiblities(containsDirectly, types, 0);
-
-            return res;
+            GetPossiblities("shiny gold");
+            return set.Count;
         }
 
         public static int Day7_P2(string[] groups)
@@ -21,26 +23,16 @@ namespace AdventOfCode
             return 0;
         }
 
-        private static int GetPossiblities(IEnumerable<string> contains, Dictionary<string, List<string>> types, int count)
+        //Surrendered -> Rework!
+        static void GetPossiblities(string bag)
         {
-            var needsLookup = new List<string>();
-
-            foreach (var item in contains)
+            foreach (var pair in types.Where(p => p.Value.Contains(bag)))
             {
-                var containsIndirect = types.Where(x => x.Value.Contains(item.Trim())).Select(x => x.Key);
-                var x = containsIndirect.Count();
-                needsLookup.AddRange(containsIndirect);
-            }
-            if (needsLookup.Count() != 0)
-            {
-                count += needsLookup.Count();
-                return GetPossiblities(needsLookup, types, count);
-            }
-            else
-            {
-                return count;
+                set.Add(pair.Key);
+                GetPossiblities(pair.Key);
             }
         }
+
 
         private static Dictionary<string, List<string>> GetBagTypes(string[] input)
         {
